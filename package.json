@@ -1,0 +1,28 @@
+{
+  "name": "11ty-11tyjs-test",
+  "description": "Experimenting w/ .11ty.js templates and pagination.",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bugs": {
+    "url": "https://github.com/pdehaan/11ty-11tyjs-test/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "del": "^5.1.0"
+  },
+  "homepage": "https://github.com/pdehaan/11ty-11tyjs-test#readme",
+  "keywords": ["11ty", "eleventy", "pagination", "11ty.js"],
+  "license": "MPL-2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/11ty-11tyjs-test.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "format:input": "npx prettier 'src/**/*.js' --write",
+    "format:output": "npx prettier 'www/**/*.html' --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
