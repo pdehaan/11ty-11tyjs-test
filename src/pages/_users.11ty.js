@@ -22,8 +22,13 @@ class UsersTemplate {
     };
   }
   render(data) {
+    const nav = data.pagination.pages.map((pageEntry, idx) => {
+      const href = data.pagination.hrefs[idx];
+      const ariaCurrent = data.page.url === data.pagination.hrefs[idx] ? `aria-current="page"` : "";
+      return `<li><a href="${ href }" ${ariaCurrent}>Page ${ idx + 1 }</a></li>`;
+    }).join("");
     const userString = data.user.map(user => user.name);
-    return `<h2>Hello ${userString.join(" and ")}!</h2>`;
+    return `<h2>Hello ${userString.join(" and ")}!</h2><nav><ul>${ nav }</ul></nav>`;
   }
 }
 
